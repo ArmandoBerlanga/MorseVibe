@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MorseVibe</string>
+    <string name="title_emisor">Emisor</string>
+    <string name="title_receptor">Receptor</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="escribe_un_mensaje">Escribe tu mensaje</string>
+    <string name="enviar">Enviar</string>
+    <string name="escribe_el_mensaje_aqui">Escribe el mensaje aquí</string>
+    <string name="entendi">Entendi</string>
+    <string name="no_entendi">No entendi</string>
+</resources>
