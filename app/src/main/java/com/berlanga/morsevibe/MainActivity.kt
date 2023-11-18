@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity(), Communicator {
 
         sharedBundle = Bundle()
         sharedBundle.putString("sharedText", "")
+        sharedBundle.putString("understand", "")
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

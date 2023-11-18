@@ -31,6 +31,13 @@ class EmisorFragment : Fragment() {
         val btnEmisorLimpiar: Button = binding.btnEmisorLimpiar
         val messageFromEmisor: EditText = binding.messageFromEmisor
 
+        val understand = mainActivity?.sharedBundle?.getString("understand")
+
+        if (understand == "1") {
+            Toast.makeText(context, "Mensaje entendido", Toast.LENGTH_SHORT).show()
+            mainActivity.sharedBundle.putString("understand", "")
+        }
+
         btnEmisorEnviar.setOnClickListener {
             val message = messageFromEmisor.text.toString()
 

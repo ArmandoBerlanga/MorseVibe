@@ -45,9 +45,10 @@ class ReceptorFragment : Fragment() {
                 translateAndVibrate("Al dar click una vez mas significa que entendiste")
                 understandCount++
             } else {
-                translateAndVibrate("Entendido")
-                mainActivity?.sharedBundle?.putString("understand", "Entendido")
+                translateAndVibrate("Se ha entendido el mensaje")
+                mainActivity?.sharedBundle?.putString("understand", "1")
                 understandCount = 0
+                mainActivity?.sharedBundle?.putString("sharedText", "")
             }
         }
 
@@ -57,9 +58,10 @@ class ReceptorFragment : Fragment() {
                 translateAndVibrate("Al dar click una vez mas significa que NO entendiste")
                 notUnderstandCount++
             } else {
-                translateAndVibrate("Entendido")
-                mainActivity?.sharedBundle?.putString("understand", "Entendido")
+                translateAndVibrate("No se ha entendido el mensaje")
+                mainActivity?.sharedBundle?.putString("understand", "0")
                 notUnderstandCount = 0
+                mainActivity?.sharedBundle?.putString("sharedText", "")
             }
         }
 
