@@ -37,7 +37,7 @@ class ReceptorFragment : Fragment() {
             return root
 
         vibrator = activity?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
-        // translateAndVibrate(sharedText)
+        translateAndVibrate("Mensaje pendiente: el mensaje dice: " + sharedText)
 
         var understandCount = 0
         understand.setOnClickListener {
