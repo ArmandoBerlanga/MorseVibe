@@ -41,13 +41,26 @@ class ReceptorFragment : Fragment() {
 
         var understandCount = 0
         understand.setOnClickListener {
-            // Toast.makeText(context, "Entendido", Toast.LENGTH_SHORT).show()
-            // translateAndVibrate(sharedText)
+            if (understandCount == 0) {
+                translateAndVibrate("Al dar click una vez mas significa que entendiste")
+                understandCount++
+            } else {
+                translateAndVibrate("Entendido")
+                mainActivity?.sharedBundle?.putString("understand", "Entendido")
+                understandCount = 0
+            }
         }
 
         var notUnderstandCount = 0
         notUnderstand.setOnClickListener {
-            // Toast.makeText(context, "No entendido", Toast.LENGTH_SHORT).show()
+            if (notUnderstandCount == 0) {
+                translateAndVibrate("Al dar click una vez mas significa que NO entendiste")
+                notUnderstandCount++
+            } else {
+                translateAndVibrate("Entendido")
+                mainActivity?.sharedBundle?.putString("understand", "Entendido")
+                notUnderstandCount = 0
+            }
         }
 
         return root
