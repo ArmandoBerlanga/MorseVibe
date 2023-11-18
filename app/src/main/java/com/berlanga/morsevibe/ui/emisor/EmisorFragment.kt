@@ -23,6 +23,7 @@ class EmisorFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View {
         _binding = FragmentEmisorBinding.inflate(inflater, container, false)
+        
         val root: View = binding.root
 
         val mainActivity = activity as? MainActivity
@@ -32,7 +33,6 @@ class EmisorFragment : Fragment() {
         val messageFromEmisor: EditText = binding.messageFromEmisor
 
         val understand = mainActivity?.sharedBundle?.getString("understand")
-
         if (understand == "1") {
             Toast.makeText(context, "Mensaje entendido", Toast.LENGTH_SHORT).show()
             mainActivity.sharedBundle.putString("understand", "")
@@ -40,11 +40,8 @@ class EmisorFragment : Fragment() {
 
         btnEmisorEnviar.setOnClickListener {
             val message = messageFromEmisor.text.toString()
-
             mainActivity?.sharedBundle?.putString("sharedText", message)
-
             messageFromEmisor.setText("")
-
             Toast.makeText(context, "Mensaje enviado", Toast.LENGTH_SHORT).show()
         }
 
